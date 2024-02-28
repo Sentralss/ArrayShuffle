@@ -20,6 +20,13 @@ public class ArrayShuffle
     {
         int[] retArr = new int[arr.length];
         //your shuffle code goes here
+        int n = arr.length;
+            for(int i = 0; i < retArr.length / 2; i++){
+                retArr[2 * i] = arr[i];
+                retArr[2 * i + 1] = arr[ i + n/2];
+            }
+            retArr[n-1] = arr[n-1];
+        
         return retArr;
     }
 }
